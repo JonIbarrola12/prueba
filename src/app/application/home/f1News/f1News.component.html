@@ -1,0 +1,31 @@
+<div class="p-6">
+    <h2 class="text-2xl font-bold mb-4">Últimas noticias de F1 🏎️</h2>
+    
+    @if (errorMessage) {
+        <div class="alert alert-error mb-4">
+            {{ errorMessage }}
+        </div>
+    }
+
+    @if (news.length > 0) {
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            @for (new of news; track $index) {
+                <div class="card bg-base-200 shadow-md hover:shadow-lg transition-all">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ new.title }}</h3>
+                        <p>{{ new.description }}</p>
+                        @if (new.url) {
+                            <a [href]="new.url" target="_blank" class="link text-primary hover:text-primary-focus">
+                                Leer más →
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    } @else {
+        <div class="flex justify-center items-center p-8">
+            <span class="loading loading-spinner loading-lg text-primary"></span>
+        </div>
+    }
+</div>

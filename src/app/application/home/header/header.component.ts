@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-home-header',
@@ -8,4 +7,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent { }
+export class HeaderComponent {
+  isVisible = signal(true);
+
+  hideMessage() {
+    this.isVisible.set(false);
+  }
+}

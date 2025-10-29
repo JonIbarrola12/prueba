@@ -12,9 +12,9 @@ import { Flag, Home, Info, LucideAngularModule, UserCheck, ChevronLeft, ChevronR
 export class SideMenuComponent {
   collapsed = false;
 
+  Home = Home;
   ChevronLeft = ChevronLeft;
   ChevronRight = ChevronRight;
-
   
   pages = [
     { label: 'Home', path: '/', icon: Home },

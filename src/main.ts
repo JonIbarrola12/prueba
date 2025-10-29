@@ -4,11 +4,15 @@ import { importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 import { App } from './app/app';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 bootstrapApplication(App, {
   providers: [
     provideRouter(routes),
-    importProvidersFrom(LucideAngularModule.pick({ Home, Info, Flag, UserCheck, ChevronRight, ChevronLeft }),HttpClientModule)
+    provideHttpClient(),
+    importProvidersFrom(
+      LucideAngularModule.pick({ Home, Info, Flag, UserCheck, ChevronRight, ChevronLeft }),
+      HttpClientModule
+    )
   ],
 });
