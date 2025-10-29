@@ -1,12 +1,17 @@
-<div class="w-64 bg-base-200 min-h-full">
-  <ul class="menu p-4">
+<div class="bg-base-200 min-h-full w-16 hover:w-64 transition-all duration-300 overflow-hidden">
+  <ul class="menu p-4 flex flex-col">
     @for (page of pages; track $index) {
-      <li>
-        <a [routerLink]="page.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          <lucide-icon [img]="page.icon" class="w-5 h-5 mr-2"></lucide-icon>
-          {{ page.label }}
+      <li class="flex items-center">
+        <a [routerLink]="page.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+           class="flex items-start justify-start w-full">
+          <lucide-icon [img]="page.icon" class="w-5 h-5"></lucide-icon>
+          <!-- El texto se muestra inmediatamente al expandir el menú -->
+          <span class="ml-2 whitespace-nowrap">
+            {{ page.label }}
+          </span>
         </a>
       </li>
     }
   </ul>
 </div>
+

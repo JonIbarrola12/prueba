@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Pulse | Tu portal de Fórmula 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="bg-base-200 text-base-content">
+
+  <!-- 🏎️ HERO -->
+  <section class="hero min-h-[80vh]" style="background-image: url('https://cdn.pixabay.com/photo/2016/11/21/15/39/race-car-1840437_1280.jpg');">
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-lg">
+        <h1 class="mb-5 text-5xl font-bold text-white drop-shadow-lg">Siente la Velocidad</h1>
+        <p class="mb-5">Noticias, pilotos, equipos y todo lo que necesitas saber sobre la Fórmula 1 en un solo lugar.</p>
+        <button class="btn btn-error btn-wide">Ver Últimas Noticias</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📰 ÚLTIMAS NOTICIAS -->
+  <app-news></app-news>
+
+  <!-- 🏁 PILOTOS DESTACADOS -->
+  <section class="p-8 bg-base-100">
+    <h2 class="text-3xl font-bold mb-6 text-center">Pilotos Destacados</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <div class="card w-60 bg-base-200 shadow-md">
+        <figure class="px-4 pt-4"><img src="https://cdn.pixabay.com/photo/2022/06/13/16/25/formula-1-7259739_1280.jpg" alt="Max Verstappen" class="rounded-xl" /></figure>
+        <div class="card-body items-center text-center">
+          <h3 class="card-title">Max Verstappen</h3>
+          <p>Red Bull Racing</p>
+        </div>
+      </div>
+      <div class="card w-60 bg-base-200 shadow-md">
+        <figure class="px-4 pt-4"><img src="https://cdn.pixabay.com/photo/2021/06/09/20/27/formula-1-6322935_1280.jpg" alt="Charles Leclerc" class="rounded-xl" /></figure>
+        <div class="card-body items-center text-center">
+          <h3 class="card-title">Charles Leclerc</h3>
+          <p>Ferrari</p>
+        </div>
+      </div>
+      <div class="card w-60 bg-base-200 shadow-md">
+        <figure class="px-4 pt-4"><img src="https://cdn.pixabay.com/photo/2020/03/07/18/11/formula-1-4909522_1280.jpg" alt="Lewis Hamilton" class="rounded-xl" /></figure>
+        <div class="card-body items-center text-center">
+          <h3 class="card-title">Lewis Hamilton</h3>
+          <p>Mercedes AMG</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📅 PRÓXIMAS CARRERAS -->
+  <section class="p-8">
+    <h2 class="text-3xl font-bold mb-6 text-center">Próximas Carreras</h2>
+    <div class="overflow-x-auto">
+      <table class="table w-full">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Gran Premio</th>
+            <th>Ubicación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>10 Nov</td><td>Gran Premio de Brasil</td><td>São Paulo</td></tr>
+          <tr><td>24 Nov</td><td>Gran Premio de Las Vegas</td><td>Las Vegas, USA</td></tr>
+          <tr><td>1 Dic</td><td>Gran Premio de Abu Dhabi</td><td>Yas Marina</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</body>
+</html>
